@@ -1,5 +1,7 @@
 package _02_boolean._5_googly_eyes;
 
+import java.awt.Color;
+
 import processing.core.PApplet;
 import processing.core.PImage;
 
@@ -12,7 +14,7 @@ import processing.core.PImage;
  * 
  * 2. Declare a variable for the image:
  *    PImage face;
- * 
+
  * 3. In your setup() method, import your image using the following code:
  *    face = loadImage("face.jpg");
  * 
@@ -37,8 +39,8 @@ import processing.core.PImage;
  *    to the boundary. Put this code before you draw the pupils.
  */
 public class GooglyEyes extends PApplet {
-    static final int WIDTH = 800;
-    static final int HEIGHT = 600;
+    static final int WIDTH = 500;
+    static final int HEIGHT = 500;
     
     PImage face;
     
@@ -49,12 +51,21 @@ public class GooglyEyes extends PApplet {
     
     @Override
     public void setup() {
-
+    	face=loadImage("face.jpg");
+    	face.resize(WIDTH, HEIGHT);
     }
 
     @Override
     public void draw() {
-
+    	background(face);
+    	if(mousePressed) {	
+    	background(face);
+    	fill(255,255,255);
+    	ellipse(164,90,75,75);
+    	fill(0,0,0);
+    	ellipse(164,90,30,30);
+    }
+    	
     }
 
     static public void main(String[] args) {

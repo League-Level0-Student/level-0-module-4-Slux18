@@ -34,7 +34,7 @@ drawBlueSquare();
             JOptionPane.showMessageDialog(null, "No shape was drawn!");
         }
 		
-		// 1. Run the program and notice no shape is drawn. yep
+		// 1. Run the program and notice no shape is drawn.
 		
 		// 2. Initialize isRed to true instead of false and run the program 
 		//    again. it draws a red square 
